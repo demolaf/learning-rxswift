@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CounterViewController.swift
 //  LearningRxSwift
 //
 //  Created by Ademola Fadumo on 24/11/2023.
@@ -24,6 +24,7 @@ class CounterViewController: UIViewController {
     private let counterText: UILabel = {
         let label = UILabel()
         label.text = "0"
+        label.font = .systemFont(ofSize: 36)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -74,7 +75,7 @@ class CounterViewController: UIViewController {
         
         view.backgroundColor = .white
         initializeSubviews()
-        initialzeCounterSubscription()
+        initializeCounterSubscription()
     }
     
     override func viewDidLayoutSubviews() {
@@ -89,7 +90,7 @@ class CounterViewController: UIViewController {
         mainView.addSubview(decrementButton)
     }
 
-    private func initialzeCounterSubscription() {
+    private func initializeCounterSubscription() {
         relay.subscribe(
             onNext: {[weak self] value in
                 self?.counterText.text = String(value)
@@ -109,8 +110,8 @@ class CounterViewController: UIViewController {
             // Main View constraints
             mainView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
             mainView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
-            mainView.topAnchor.constraint(equalTo: view.topAnchor, constant: 24),
-            mainView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -48),
+            mainView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            mainView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -24),
             
             // Counter Label constraints
             counterText.centerXAnchor.constraint(equalTo: mainView.centerXAnchor),
