@@ -17,6 +17,8 @@
 		7E40E86A2B10C12300E52F55 /* LearningRxSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E40E8692B10C12300E52F55 /* LearningRxSwiftTests.swift */; };
 		7E40E8742B10C12300E52F55 /* LearningRxSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E40E8732B10C12300E52F55 /* LearningRxSwiftUITests.swift */; };
 		7E40E8762B10C12300E52F55 /* LearningRxSwiftUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E40E8752B10C12300E52F55 /* LearningRxSwiftUITestsLaunchTests.swift */; };
+		7ED252C92B140FD40099EE30 /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED252C82B140FD40099EE30 /* StopWatchViewController.swift */; };
+		7EFEEA1B2B165C4E00D1F742 /* StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFEEA1A2B165C4E00D1F742 /* StopWatch.swift */; };
 		ACA2A56D50D168B636592DCF /* Pods_LearningRxSwift_LearningRxSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523343BD0431B161F81140C1 /* Pods_LearningRxSwift_LearningRxSwiftUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,7 +57,9 @@
 		7E40E86F2B10C12300E52F55 /* LearningRxSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearningRxSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E40E8732B10C12300E52F55 /* LearningRxSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningRxSwiftUITests.swift; sourceTree = "<group>"; };
 		7E40E8752B10C12300E52F55 /* LearningRxSwiftUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningRxSwiftUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		7E40E8852B1379FA00E52F55 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = ../MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		7ED252C72B13A6C30099EE30 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		7ED252C82B140FD40099EE30 /* StopWatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
+		7EFEEA1A2B165C4E00D1F742 /* StopWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatch.swift; sourceTree = "<group>"; };
 		8BE160B261B678D725D6CD41 /* Pods_LearningRxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearningRxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF4515F4CB64BA06162C622 /* Pods-LearningRxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningRxSwift.debug.xcconfig"; path = "Target Support Files/Pods-LearningRxSwift/Pods-LearningRxSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		C1E9E61EB235D8E96B0696A7 /* Pods-LearningRxSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningRxSwiftTests.release.xcconfig"; path = "Target Support Files/Pods-LearningRxSwiftTests/Pods-LearningRxSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,9 +133,9 @@
 		7E40E8512B10C12200E52F55 /* LearningRxSwift */ = {
 			isa = PBXGroup;
 			children = (
+				7ED252CA2B140FDA0099EE30 /* View Controllers */,
 				7E40E8522B10C12200E52F55 /* AppDelegate.swift */,
 				7E40E8542B10C12200E52F55 /* SceneDelegate.swift */,
-				7E40E8562B10C12200E52F55 /* CounterViewController.swift */,
 				7E40E85B2B10C12300E52F55 /* Assets.xcassets */,
 				7E40E85D2B10C12300E52F55 /* LaunchScreen.storyboard */,
 				7E40E8602B10C12300E52F55 /* Info.plist */,
@@ -156,12 +160,30 @@
 			path = LearningRxSwiftUITests;
 			sourceTree = "<group>";
 		};
+		7ED252CA2B140FDA0099EE30 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7EFEEA192B165C2900D1F742 /* Stop Watch */,
+				7E40E8562B10C12200E52F55 /* CounterViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		7ED55D8E2B137B0400E593A0 /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
-				7E40E8852B1379FA00E52F55 /* MyPlayground.playground */,
+				7ED252C72B13A6C30099EE30 /* MyPlayground.playground */,
 			);
 			path = Playgrounds;
+			sourceTree = "<group>";
+		};
+		7EFEEA192B165C2900D1F742 /* Stop Watch */ = {
+			isa = PBXGroup;
+			children = (
+				7ED252C82B140FD40099EE30 /* StopWatchViewController.swift */,
+				7EFEEA1A2B165C4E00D1F742 /* StopWatch.swift */,
+			);
+			path = "Stop Watch";
 			sourceTree = "<group>";
 		};
 		C0619202977A6AC372A75677 /* Frameworks */ = {
@@ -430,7 +452,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ED252C92B140FD40099EE30 /* StopWatchViewController.swift in Sources */,
 				7E40E8572B10C12200E52F55 /* CounterViewController.swift in Sources */,
+				7EFEEA1B2B165C4E00D1F742 /* StopWatch.swift in Sources */,
 				7E40E8532B10C12200E52F55 /* AppDelegate.swift in Sources */,
 				7E40E8552B10C12200E52F55 /* SceneDelegate.swift in Sources */,
 			);

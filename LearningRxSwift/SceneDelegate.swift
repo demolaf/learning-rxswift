@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         
-        window.rootViewController = UINavigationController(rootViewController: CounterViewController())
+        window.rootViewController = UINavigationController(rootViewController: StopWatchViewController())
         
         self.window = window
         window.makeKeyAndVisible()
