@@ -21,6 +21,7 @@ class CounterViewController: UIViewController {
         let label = UILabel()
         label.text = "0"
         label.font = .systemFont(ofSize: 36)
+        label.textColor = .label
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -73,7 +74,7 @@ class CounterViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         initializeSubviews()
         initializeCounterSubscription()
     }
