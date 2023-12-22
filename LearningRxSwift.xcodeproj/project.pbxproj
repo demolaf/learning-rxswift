@@ -160,11 +160,19 @@
 			path = LearningRxSwiftUITests;
 			sourceTree = "<group>";
 		};
+		7E869A9E2B1844F00026C279 /* Counter */ = {
+			isa = PBXGroup;
+			children = (
+				7E40E8562B10C12200E52F55 /* CounterViewController.swift */,
+			);
+			path = Counter;
+			sourceTree = "<group>";
+		};
 		7ED252CA2B140FDA0099EE30 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7E869A9E2B1844F00026C279 /* Counter */,
 				7EFEEA192B165C2900D1F742 /* Stop Watch */,
-				7E40E8562B10C12200E52F55 /* CounterViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";

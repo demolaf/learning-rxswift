@@ -10,11 +10,7 @@ import RxSwift
 import RxRelay
 
 class CounterViewController: UIViewController {
-    
-    private let bag = DisposeBag()
-    
-    private let relay = BehaviorRelay<Int>(value: 0)
-    
+
     private let mainView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -68,6 +64,10 @@ class CounterViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
+    
+    private let bag = DisposeBag()
+    
+    private let counterRelay = BehaviorRelay<Int>(value: 0)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,7 +91,7 @@ class CounterViewController: UIViewController {
     }
 
     private func initializeCounterSubscription() {
-        relay.subscribe(
+        counterRelay.subscribe(
             onNext: {[weak self] value in
                 self?.counterText.text = String(value)
             },
@@ -128,11 +128,11 @@ class CounterViewController: UIViewController {
     }
     
     private func increment() {
-        relay.accept(relay.value + 1)
+        counterRelay.accept(counterRelay.value + 1)
     }
     
     private func decrement() {
-        relay.accept(relay.value - 1)
+        counterRelay.accept(counterRelay.value - 1)
     }
 }
 

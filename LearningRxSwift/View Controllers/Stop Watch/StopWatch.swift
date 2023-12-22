@@ -20,7 +20,7 @@ class StopWatch: UIView {
     private lazy var circleView: UIView = {
         let view = UIView()
         view.layer.cornerRadius = size.width * 0.5
-        view.layer.borderColor = UIColor.label.cgColor
+        view.layer.borderColor = UIColor.systemGray.cgColor
         view.layer.borderWidth = 4
         view.clipsToBounds = true
         view.layer.masksToBounds = true
@@ -28,7 +28,7 @@ class StopWatch: UIView {
         return view
     }()
     
-    private let timerText: UILabel = {
+    var timerTextLabel: UILabel = {
         let label = UILabel()
         label.text = "00:00:00"
         label.font = .systemFont(ofSize: 28)
@@ -58,7 +58,7 @@ class StopWatch: UIView {
     private func initializeSubviews() {
         self.addSubview(mainView)
         mainView.addSubview(circleView)
-        circleView.addSubview(timerText)
+        circleView.addSubview(timerTextLabel)
     }
     
     private func applyConstraints() {
@@ -78,8 +78,8 @@ class StopWatch: UIView {
             circleView.heightAnchor.constraint(equalToConstant: size.height),
             
             // timerText constraints
-            timerText.centerXAnchor.constraint(equalTo: self.circleView.centerXAnchor),
-            timerText.centerYAnchor.constraint(equalTo: self.circleView.centerYAnchor),
+            timerTextLabel.centerXAnchor.constraint(equalTo: self.circleView.centerXAnchor),
+            timerTextLabel.centerYAnchor.constraint(equalTo: self.circleView.centerYAnchor),
         ])
     }
 }
